@@ -1,0 +1,24 @@
+<aura:component>
+  <aura:attribute
+    name="write"
+    type="String"
+    default="Rock n Roll"
+  ></aura:attribute>
+  <input
+    type="button"
+    value="Flawed HTML Button"
+    onclick="alert('Joker is here')"
+  />
+  <br />
+  <br />
+  <input type="button" value="Hybrid HTML Button" onclick="{!c.handleClick}" />
+  <br />
+  <br />
+  <lightning:button
+    label="FrameworK Button"
+    onclick="{!c.handleClick}"
+  ></lightning:button>
+  <br />
+  <br />
+  {!v.write}
+</aura:component>

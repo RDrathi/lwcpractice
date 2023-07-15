@@ -1,0 +1,6 @@
+<design:component label="Greet as you like 🙏">
+  <design:attribute
+    name="greeting"
+    label="Enter Greeting Message Here"
+  ></design:attribute>
+</design:component>

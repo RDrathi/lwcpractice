@@ -1,0 +1,27 @@
+<template>
+  <!-- Display a greeting and an update -->
+  <lightning-card title={greeting}>
+    <template lwc:if={record}>
+      <div class="slds-m-around_medium">
+        <p><strong>{currentStatus}</strong></p>
+      </div>
+    </template>
+  </lightning-card>
+
+  <!-- Display the cases related to parent store record  -->
+  <lightning-card title="Open Case Details">
+    <template lwc:if={caseList}>
+      <lightning-datatable
+        data={caseList.data}
+        columns={tabCols}
+        key-field="Id"
+        show-row-number-column="true"
+        hide-checkbox-column="true"
+      ></lightning-datatable>
+    </template>
+    <template lwc:elseif={error}> {error} </template>
+    <template lwc:else>
+      <strong>There are no cases for this store. Great!</strong>
+    </template>
+  </lightning-card>
+</template>

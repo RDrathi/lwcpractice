@@ -1,0 +1,11 @@
+<aura:component controller="simpleServerController">
+  <aura:attribute
+    name="firstName"
+    type="String"
+    default="Rathindra"
+  ></aura:attribute>
+  <lightning:button
+    label="Call Server"
+    onclick="{!c.clientEcho}"
+  ></lightning:button>
+</aura:component>

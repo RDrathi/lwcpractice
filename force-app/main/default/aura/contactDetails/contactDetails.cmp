@@ -1,0 +1,17 @@
+<aura:component controller="ContactController">
+  <aura:attribute
+    name="conRecord"
+    type="Contact"
+    default="{'sobjectType': 'Contact'}"
+  ></aura:attribute>
+  <aura:handler
+    event="aura:locationChange"
+    action="{!c.locationChangeHandler}"
+  ></aura:handler>
+  <div class="display-4">
+    <h1>{!v.conRecord.Name}</h1>
+    <h3>{!v.conRecord.Account.Name}</h3>
+    <h3>{!v.conRecord.Title}</h3>
+    <h3>{!v.conRecord.Phone}</h3>
+  </div>
+</aura:component>

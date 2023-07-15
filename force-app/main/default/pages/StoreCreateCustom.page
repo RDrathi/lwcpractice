@@ -1,0 +1,29 @@
+<apex:page controller="StoreCustomController" lightningStylesheets="true" title="Custom Retail Controller" docType="html-5.0">
+    <!-- Display a greeting and a message -->
+    <apex:pageBlock title="Hello {!$User.FirstName} with {!$Profile.Name} profile!">
+        Welcome to the Rathi and Co. Custom Retail Store Controller
+    </apex:pageBlock>
+    <apex:messages/>
+    <!-- Display a form to show fields for a Store -->
+    <apex:form>
+        <apex:pageBlock title="Create New or Edit Existing Retail Store">
+            <apex:pageBlockButtons>
+                <apex:commandButton id="saveButton" action="{!save}" value="Save"></apex:commandButton>
+                <apex:commandButton id="cancelButton" action="{!cancel}" value="Cancel"></apex:commandButton>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Retail Store Information" columns="2">
+                <apex:input value="{!name}" label="Name" id="nameInput" type="text"></apex:input>
+                <apex:input value="{!buzzId}" label="Buzz Id" id="buzzInput" type="text"></apex:input>
+                <apex:input value="{!city}" label="City" id="cityInput" type="text"></apex:input>
+                <apex:input value="{!country}" label="Country" id="countryInput" type="text"></apex:input>
+            </apex:pageBlockSection>
+            <!-- Inputs using inputField with Security -->
+            <!--<apex:pageBlockSection title="Retail Store Information" columns="2">
+                <apex:inputField value="{!currentRetailStore.Name}"></apex:inputField>
+                <apex:inputField value="{!currentRetailStore.Buzz_Id__c}"></apex:inputField>
+                <apex:inputField value="{!currentRetailStore.City__c}"></apex:inputField>
+                <apex:inputField value="{!currentRetailStore.Country__c}"></apex:inputField>
+            </apex:pageBlockSection> -->
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

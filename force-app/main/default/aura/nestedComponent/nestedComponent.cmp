@@ -1,0 +1,23 @@
+<aura:component>
+  <aura:attribute name="firstName" type="String"></aura:attribute>
+  <lightning:input
+    label="First Name"
+    aura:Id="firstName"
+    placeholder="Enter your First Name"
+  ></lightning:input>
+  <br />
+  <lightning:input
+    label="Last Name"
+    aura:Id="lastName"
+    placeholder="Enter your Last Name"
+  ></lightning:input>
+  <br />
+  <lightning:formattedText aura:Id="nameOutput"></lightning:formattedText>
+  <br />
+  <br />
+  <lightning:button
+    aura:Id="buttonId"
+    label="Click Me 👆"
+    onclick="{!c.getInput}"
+  ></lightning:button>
+</aura:component>

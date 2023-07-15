@@ -1,0 +1,13 @@
+<apex:page standardController="Retail_Store__c" extensions="storeControllerExt" lightningStylesheets="true">
+<apex:pageBlock title="Hello {!$User.FirstName}">
+  <strong> You are viewing the {!Retail_Store__c.name} Store case list in a VF Page.</strong>
+</apex:pageBlock>
+<apex:pageBlock title="Open Case Details">
+    <apex:pageBlockTable value="{!openCases}" var="case">
+        <apex:column value="{!case.Subject}"></apex:column>
+        <apex:column value="{!case.Status}"></apex:column>
+        <apex:column value="{!case.Priority}"></apex:column>
+        <apex:column value="{!case.CreatedDate}"></apex:column>
+    </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:page>

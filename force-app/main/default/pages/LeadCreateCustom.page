@@ -1,0 +1,33 @@
+<apex:page controller="LeadCustomController" lightningStylesheets="true" title="Custom Controller">
+    <!-- Display a greeting message  -->
+    <apex:pageBlock title="Hello Mr. {!$User.LastName}!">
+        Welcome to Rathindra and Co. lead creation page with a {!pageType}
+    </apex:pageBlock>
+    <apex:messages/>
+    <apex:form>
+    <apex:pageBlock title="New or Existing Lead">
+        <apex:pageBlockButtons>
+            <apex:commandButton id="saveAndNewButton" action="{!saveAndNew}" value="Save and New"></apex:commandButton> 
+            <apex:commandButton id="cancelButton" action="{!cancel}" value="Cancel"></apex:commandButton> 
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Lead Information" columns="2">
+            <apex:inputField value="{!currentLead.FirstName}"></apex:inputField>
+            <apex:inputField value="{!currentLead.LastName}"></apex:inputField>
+            <apex:inputField value="{!currentLead.Email}"></apex:inputField>
+            <apex:inputField value="{!currentLead.Company}"></apex:inputField>
+            <apex:inputField value="{!currentLead.LeadSource}"></apex:inputField>
+            <apex:inputField value="{!currentLead.Rating}"></apex:inputField>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock>
+        <apex:pageBlockTable value="{!leadRecs}" var="leadRec">
+            <apex:column value="{!leadRec.FirstName}"></apex:column>
+            <apex:column value="{!leadRec.LastName}"></apex:column>
+            <apex:column value="{!leadRec.Email}"></apex:column>
+            <apex:column value="{!leadRec.Company}"></apex:column>
+            <apex:column value="{!leadRec.LeadSource}"></apex:column>
+            <apex:column value="{!leadRec.Rating}"></apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

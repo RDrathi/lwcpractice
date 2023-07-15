@@ -1,0 +1,11 @@
+<aura:component>
+  <h1>Hello Rathindra Dakua</h1>
+  <div>
+    <div class="red">I could be Red</div>
+    <div class="yellow">I could be Yellow</div>
+    <div class="green">I could be Green</div>
+    <div class="purple">I could be Purple</div>
+    <ltng:require styles="/resource/bootstrap"></ltng:require>
+    <div class="text-info">Here are some info</div>
+  </div>
+</aura:component>

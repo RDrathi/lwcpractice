@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+  <aura:attribute name="greeting" type="String"></aura:attribute>
+  <div class="slds-grid slds-gutters">
+    <div class="slds-col">
+      <h2 class="banner">{!v.greeting}</h2>
+    </div>
+  </div>
+</aura:component>

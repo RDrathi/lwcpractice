@@ -1,0 +1,14 @@
+<apex:page standardController="Account" lightningStylesheets="true" applyBodyTag="false">
+    <body class="slds-vf-scope">
+        <apex:pageBlock title="Hello {!$User.FirstName}!">
+            The page shows all the contacts related to the {!account.name} account.
+        </apex:pageBlock>
+        <apex:pageBlock title="Contacts">
+            <apex:pageBlockTable value="{!account.Contacts}" var="conRec">
+                <apex:column value="{!conRec.Name}"></apex:column>
+                <apex:column value="{!conRec.Email}"></apex:column>
+                <apex:column value="{!conRec.Phone}"></apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </body>
+</apex:page>

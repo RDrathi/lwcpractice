@@ -1,0 +1,30 @@
+.THIS {
+  background-color: rgb(202, 231, 231);
+  padding: 10px;
+}
+h1.THIS {
+  font-size: 60px;
+}
+
+.THIS h1 {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.THIS .red {
+  background-color: red;
+  font-size: 30px;
+}
+
+.THIS .yellow {
+  background-color: yellow;
+  font-size: 30px;
+}
+.THIS .green {
+  background-color: green;
+  font-size: 30px;
+}
+.THIS .purple {
+  background-color: purple;
+  font-size: 30px;
+}

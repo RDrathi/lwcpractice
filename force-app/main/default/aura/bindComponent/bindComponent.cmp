@@ -1,0 +1,29 @@
+<aura:component>
+  <aura:attribute
+    name="firstname"
+    type="String"
+    default="Raju"
+  ></aura:attribute>
+  <aura:attribute
+    name="lastname"
+    type="String"
+    default="Rastogi"
+  ></aura:attribute>
+  <lightning:input
+    label="First Name"
+    value="{!v.firstname}"
+    oncommit="keyup"
+  ></lightning:input>
+  <br />
+  <lightning:input
+    label="Last Name"
+    value="{!v.lastname}"
+    oncommit="keyup"
+  ></lightning:input>
+  <br />
+  <br />
+  <lightning:formattedText
+    Label="Full Name"
+    value="{!v.firstname+' '+ v.lastname}"
+  ></lightning:formattedText>
+</aura:component>

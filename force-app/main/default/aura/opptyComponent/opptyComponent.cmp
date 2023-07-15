@@ -1,0 +1,10 @@
+<aura:component controller="OpptyAuraController">
+  <aura:attribute name="opptys" type="Opportunity[]"></aura:attribute>
+  <lightning:button
+    label="Call Me!"
+    onclick="{!c.getOpptys}"
+  ></lightning:button>
+  <aura:iteration var="opp" items="{!v.opptys}">
+    <p>{!opp.Name}</p>
+  </aura:iteration>
+</aura:component>

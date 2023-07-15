@@ -1,0 +1,10 @@
+<apex:page Controller="MaliciousController">
+  <apex:form>
+    <apex:commandButton rerender="outputIt" value="Update It"/>
+    <apex:inputText value="{!myTextField}"/>
+  </apex:form>
+
+  <apex:outputPanel id="outputIt"> 
+    Value of myTextField is &nbsp; <apex:outputText value="{!HTMLENCODE(myTextField)}" escape="false"/>
+  </apex:outputPanel>    
+</apex:page>

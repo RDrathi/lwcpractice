@@ -1,0 +1,21 @@
+<template>
+    <!-- Search bar -->
+    <lightning-card title="Safe Account Search">
+        <lightning-input type="search" onchange={handleSearchTermChange} variant="label-hidden"
+            class="slds-var-m-bottom_small slds-var-p-around_small" label="Search Account"
+            placeholder="Enter Account Name for search" value={searchTerm}>
+        </lightning-input>
+    </lightning-card>
+    <!-- Display all account -->
+    <lightning-card title="Accounts that you searched for">
+        <template lwc:if={searchedAccList}>
+            <lightning-datatable data={searchedAccList} columns={tabCols} key-field="Id"></lightning-datatable>
+        </template>
+        <template lwc:elseif={error}>
+            {error}
+        </template>
+        <template lwc:else>
+            Sorry! Your search term did not return any result. Please try again.
+        </template>
+    </lightning-card>
+</template>

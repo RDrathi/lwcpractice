@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Opportunity List" icon-name="utility:opportunity">
+    <div
+      class="slds-p-top_x-small slds-p-left_medium slds-p-right_medium slds-p-bottom_medium"
+    >
+      <lightning-datatable
+        data={oppList.data}
+        columns={tabCols}
+        key-field="Id"
+        show-row-number-column="true"
+        hide-checkbox-column="true"
+        onsave={saveHandler}
+        draft-values={draftValues}
+      ></lightning-datatable>
+    </div>
+  </lightning-card>
+</template>
