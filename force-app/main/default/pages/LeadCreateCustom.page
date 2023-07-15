@@ -3,10 +3,10 @@
     <apex:pageBlock title="Hello Mr. {!$User.LastName}!">
         Welcome to Rathindra and Co. lead creation page with a {!pageType}
     </apex:pageBlock>
-    <apex:messages/>
-    <apex:form>
+    <apex:messages />
+    <apex:form >
     <apex:pageBlock title="New or Existing Lead">
-        <apex:pageBlockButtons>
+        <apex:pageBlockButtons >
             <apex:commandButton id="saveAndNewButton" action="{!saveAndNew}" value="Save and New"></apex:commandButton> 
             <apex:commandButton id="cancelButton" action="{!cancel}" value="Cancel"></apex:commandButton> 
         </apex:pageBlockButtons>
@@ -19,7 +19,7 @@
             <apex:inputField value="{!currentLead.Rating}"></apex:inputField>
         </apex:pageBlockSection>
     </apex:pageBlock>
-    <apex:pageBlock>
+    <apex:pageBlock >
         <apex:pageBlockTable value="{!leadRecs}" var="leadRec">
             <apex:column value="{!leadRec.FirstName}"></apex:column>
             <apex:column value="{!leadRec.LastName}"></apex:column>

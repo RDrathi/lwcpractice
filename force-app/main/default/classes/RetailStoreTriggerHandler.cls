@@ -129,13 +129,13 @@ public with sharing class RetailStoreTriggerHandler {
   private static HttpResponse getResponseFromApi(HttpRequest requestParam) {
     Http httpObj = new Http();
     //Call a mock response here instead of an actual one
-    //HttpResponse responseBody = httpObj.send(requestParam);
-    HttpResponse responseToReturn = new HttpResponse();
-    responseToReturn.setBody(MockCoffeePriceResponse.coffeeApiResponse);
-    responseToReturn.setStatus('OK');
-    responseToReturn.setStatusCode(200);
+    HttpResponse responseBody = httpObj.send(requestParam);
+    // HttpResponse responseToReturn = new HttpResponse();
+    // responseToReturn.setBody(MockCoffeePriceResponse.coffeeApiResponse);
+    // responseToReturn.setStatus('OK');
+    // responseToReturn.setStatusCode(200);
 
-    return responseToReturn;
+    return responseBody;
   }
 
   public class coffeeApiResponse {

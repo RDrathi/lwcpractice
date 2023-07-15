@@ -1,5 +1,5 @@
 <apex:page Controller="MaliciousController">
-  <apex:form>
+  <apex:form >
     <apex:commandButton rerender="outputIt" value="Update It"/>
     <apex:inputText value="{!myTextField}"/>
   </apex:form>

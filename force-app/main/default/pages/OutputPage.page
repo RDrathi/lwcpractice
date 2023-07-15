@@ -1,7 +1,7 @@
 <apex:page controller="OutputEncoder" lightningStylesheets="true" title="Output Samples">
     <!-- Different types of Outputs -->
     <apex:pageBlock title="Different Outputs">
-        <apex:outputText>This page is vulnerable to attack.</apex:outputText>
+        <apex:outputText >This page is vulnerable to attack.</apex:outputText>
         <br/>
         <br/>
         <div class="greet" />
@@ -18,7 +18,7 @@
         </script>
         <br/>
         <!-- Auto Encoded output with Visualforce Tags -->
-        <apex:outputText>
+        <apex:outputText >
             Visualforce outputText tag encoded param is {!$CurrentPage.parameters.input}
         </apex:outputText>
         <br/>

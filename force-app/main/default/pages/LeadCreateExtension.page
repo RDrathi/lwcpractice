@@ -2,15 +2,15 @@
     <apex:pageBlock title="Hello Mr. {!$User.LastName}!" rendered="{!greetingToggle}">
         Welcome to Rathindra and Co. Lead creation page with a {!pageType}
     </apex:pageBlock> 
-    <apex:messages/>
-    <apex:form>
+    <apex:messages />
+    <apex:form >
         <apex:outputPanel id="counter">
             <apex:outputText value="Samples given: {!sampleCount}"></apex:outputText>
             <apex:actionSupport event="onclick" action="{!incrementSampleCounter}" reRender="counter" status="counterStatus"></apex:actionSupport>
         </apex:outputPanel>
         <apex:actionStatus id="counterStatus" startText="Status: Updating..." stopText="Status: Done"></apex:actionStatus>
         <apex:pageBlock title="New or Existing Lead">
-            <apex:pageBlockButtons>
+            <apex:pageBlockButtons >
                 <apex:commandButton id="saveButton" action="{!save}" value="Save"></apex:commandButton>
                 <apex:commandButton id="cancelButton" action="{!cancel}" value="Cancel"></apex:commandButton>
                 <apex:commandButton id="validateButton" action="{!validateLeadInfo}" value="Validate"></apex:commandButton>
@@ -25,7 +25,7 @@
                 <apex:inputField value="{!lead.Rating}"></apex:inputField>
             </apex:pageBlockSection>
         </apex:pageBlock>
-        <apex:pageBlock>
+        <apex:pageBlock >
             <apex:pageBlockTable value="{!leadRecs}" var="leadRec">
                 <apex:column value="{!leadRec.FirstName}"></apex:column>
                 <apex:column value="{!leadRec.LastName}"></apex:column>
